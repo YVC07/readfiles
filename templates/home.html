@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<center><h2>All posts</h2></center>
+	<div class="container">
+		{% for post in posts %}
+			<img  src="{{post.image}}" height="250px" width="250px" alt=" image">
+			<h4>{{post.title}}</h4>
+
+			<br>
+			<a href="{{url_for('editpost',post_id=post.id)}}" class="btn btn-primary">edit</a>
+			<a href="{{url_for('deletepost',post_id=post.id)}}" class="btn btn-danger">delete</a><br>
+
+		{% endfor %}
+	</div>
+	
+{% endblock %}

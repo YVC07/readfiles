@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class="container">
+	<h2>All posts</h2>
+	<div class="card-deck">
+	{% for post in posts %}
+		<div class="card w-75">
+		  <img class="card-img-top" src="{{post.image}}" height="300px" alt="Card image">
+		  <div class="card-body">
+		    <h4 class="card-title">{{post.title}}</h4>
+		    <a href="#" class="btn btn-primary">Edit</a>
+		     <a href="#" class="btn btn-primary">delete</a>
+		  </div>
+		</div>
+		
+	{% endfor %}
+	</div>
+	</div>
+{% endblock %}

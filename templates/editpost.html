@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class="container">
+		<form action="{{url_for('editpost',post_id=post.id)}}" method="POST" >
+			title:<input type="text" name="title" value="{{post.title}}"><br>
+			image-URL:<input type="text" name="image" value="{{post.image}}">
+			<input type="submit" name="submit" value="update">
+			
+		</form>
+	</div>
+{% endblock %}
